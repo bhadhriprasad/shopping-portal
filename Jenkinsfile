@@ -22,6 +22,11 @@ pipeline {
       }
     }
 
+    stage('artifact') {
+      steps {
+        archiveArtifacts '**/distribution/*.zip'
+      }
+    }
 
   }
   tools {
